@@ -1,4 +1,7 @@
-if (!Array.isArray(arr)) throw Error;
+const CustomError = require("../extensions/custom-error");
+
+module.exports = function transform(arr) {
+  if (!Array.isArray(arr)) throw Error;
   let resultArr = [];
   let spliceCount = 0;
   for (let j = 0; j < arr.length; j++) {
@@ -48,3 +51,4 @@ if (!Array.isArray(arr)) throw Error;
     }
   }
   return resultArr;
+};
